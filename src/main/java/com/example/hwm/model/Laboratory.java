@@ -1,5 +1,7 @@
 package com.example.hwm.model;
 
+import java.sql.Date;
+
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "lab")
@@ -9,8 +11,8 @@ public class Laboratory {
 	private int diastole;
 	private String rb_sugar;
 	private Object[] other_test;
-    private String created_at;
-    private String updated_at;
+    private Date created_at;
+    private Date updated_at;
 
 	public String getId() {
 		return _id;
@@ -20,19 +22,19 @@ public class Laboratory {
 		this._id = _id;
 	}
 
-	public String getCreatedAt() {
+	public Date getCreatedAt() {
 		return created_at;
 	}
 
-	public void setCreatedAt(String created_at) {
+	public void setCreatedAt(Date created_at) {
 		this.created_at = created_at;
 	}
 
-    public String getUpdatedAt() {
+    public Date getUpdatedAt() {
 		return updated_at;
 	}
 
-	public void setUpdatedAt(String updated_at) {
+	public void setUpdatedAt(Date updated_at) {
 		this.updated_at = updated_at;
 	}
 
@@ -67,7 +69,7 @@ public class Laboratory {
         this.other_test = other_test;
     }
 
-	public Laboratory(String _id, String created_at, String updated_at,int systole, int diastole, String rb_sugar, Object[] other_test) {
+	public Laboratory(String _id, Date created_at, Date updated_at,int systole, int diastole, String rb_sugar, Object[] other_test) {
 		this._id = _id;
 		this.created_at = created_at;
         this.updated_at = updated_at;
