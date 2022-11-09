@@ -2,7 +2,7 @@ package com.example.hwm.model;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "laboratory")
+@Document(collection = "lab")
 public class Laboratory {
     private String _id;
 	private int systole;
