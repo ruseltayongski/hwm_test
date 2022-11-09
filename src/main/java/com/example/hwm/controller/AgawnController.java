@@ -25,7 +25,7 @@ public class AgawnController {
 
     @GetMapping("/labresults")
 	public List<Laboratory> getAllUsers() {
-		return laboratoryRepository.findAll(Sort.by(Sort.Direction.DESC,"created_at"));
+		return laboratoryRepository.findAll(Sort.by(Sort.Direction.DESC,"laboratory_created"));
 	}
 
 }
