@@ -11,8 +11,8 @@ public class Laboratory {
 	private int diastole;
 	private String rb_sugar;
 	private Object[] other_test;
-    private Date created_at;
-    private Date updated_at;
+    private String laboratory_created;
+    private String laboratory_updated;
 
 	public String getId() {
 		return _id;
@@ -22,20 +22,20 @@ public class Laboratory {
 		this._id = _id;
 	}
 
-	public Date getCreatedAt() {
-		return created_at;
+	public String getLaboratoryCreated() {
+		return laboratory_created;
 	}
 
-	public void setCreatedAt(Date created_at) {
-		this.created_at = created_at;
+	public void setLaboratoryCreated(String laboratory_created) {
+		this.laboratory_created = laboratory_created;
 	}
 
-    public Date getUpdatedAt() {
-		return updated_at;
+    public String getLaboratoryUpdated() {
+		return laboratory_updated;
 	}
 
-	public void setUpdatedAt(Date updated_at) {
-		this.updated_at = updated_at;
+	public void setUpdatedAt(String laboratory_updated) {
+		this.laboratory_updated = laboratory_updated;
 	}
 
 	public int getSystole() {
@@ -69,10 +69,10 @@ public class Laboratory {
         this.other_test = other_test;
     }
 
-	public Laboratory(String _id, Date created_at, Date updated_at,int systole, int diastole, String rb_sugar, Object[] other_test) {
+	public Laboratory(String _id, String laboratory_created, String laboratory_updated,int systole, int diastole, String rb_sugar, Object[] other_test) {
 		this._id = _id;
-		this.created_at = created_at;
-        this.updated_at = updated_at;
+		this.laboratory_created = laboratory_created;
+        this.laboratory_updated = laboratory_updated;
 		this.systole = systole;
 		this.diastole = diastole;
 		this.rb_sugar = rb_sugar;
