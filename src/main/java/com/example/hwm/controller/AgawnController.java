@@ -21,7 +21,7 @@ public class AgawnController {
 
     @GetMapping("/hello")
 	public String getHello() {
-		return "Hello World WEWEWEWEW!";
+		return "Hello World DOCKER!";
 	}
 
     @GetMapping("/labresults")
