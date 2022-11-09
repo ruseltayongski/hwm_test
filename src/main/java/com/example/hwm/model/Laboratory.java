@@ -7,6 +7,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "lab")
 public class Laboratory {
     private String _id;
+	private String userId;
 	private int systole;
 	private int diastole;
 	private String rb_sugar;
@@ -20,6 +21,14 @@ public class Laboratory {
 
 	public void setId(String _id) {
 		this._id = _id;
+	}
+
+	public String getUserId() {
+		return userId;
+	}
+
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
 
 	public String getLaboratoryCreated() {
@@ -69,8 +78,9 @@ public class Laboratory {
         this.other_test = other_test;
     }
 
-	public Laboratory(String _id, String laboratory_created, String laboratory_updated,int systole, int diastole, String rb_sugar, Object[] other_test) {
+	public Laboratory(String _id, String userId, String laboratory_created, String laboratory_updated,int systole, int diastole, String rb_sugar, Object[] other_test) {
 		this._id = _id;
+		this.userId = userId;
 		this.laboratory_created = laboratory_created;
         this.laboratory_updated = laboratory_updated;
 		this.systole = systole;
